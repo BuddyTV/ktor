@@ -1,8 +1,9 @@
 /*
  * Copyright 2014-2020 JetBrains s.r.o and contributors. Use of this source code is governed by the Apache 2.0 license.
  */
-import io.ktor.client.call.*
+
 import io.ktor.client.features.json.serializer.*
+import io.ktor.util.reflect.*
 import io.ktor.utils.io.core.*
 import kotlinx.serialization.*
 import kotlinx.serialization.descriptors.*
@@ -10,7 +11,6 @@ import kotlinx.serialization.encoding.*
 import kotlinx.serialization.json.*
 import kotlinx.serialization.modules.*
 import kotlin.test.*
-
 
 @Serializable
 data class UserData(val id: Int, val name: String)
